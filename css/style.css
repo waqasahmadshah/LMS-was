@@ -92,6 +92,12 @@ img{
     border-color: #07294d;
     background-color: #07294d;
 }
+.box{
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffc600;
+}
 
 /* /* header */
 .top-nav{
@@ -133,9 +139,20 @@ img{
     background-color: #ffffff;
     color:#07294d;
 }
-
 .navbar{
     box-shadow: 0px 0px 191px 0px rgba(0, 0, 0, 0.06);
+    padding: 0;
+    position: sticky; 
+    top: 0; 
+    z-index: 10; 
+    width: 100%;
+}
+.navbar .navbar-nav .nav-item{
+    padding: 0;
+
+}
+.navbar .navbar-nav .nav-link{
+    padding: 20px;
 }
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:active{
@@ -143,7 +160,7 @@ img{
 }
 .navbar-brand{
     font-weight: 800;
-    font-size: 40px;
+    font-size: 35px;
     color:#07294d;
 }
 .navbar-brand span{
@@ -232,10 +249,10 @@ img{
 
 .category-form {
    position: relative;
-	border-radius: 5px;
+	border-radius: 10px;
 	/* overflow: hidden; */
 	box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.1);
-	margin-top: -167px;
+	/* margin-top: -167px; */
 }
 .category-form .form-title{
     background-color: #07294d;
@@ -429,28 +446,6 @@ img{
     font-weight: 600;
 }
 
-.back-to-top{
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 40px;
-    height: 40px;
-    line-height: 35px;
-    background-color: #ffc600;
-    color: #fff;
-    font-size: 28px;
-    border-radius: 5px;
-    z-index: 99;
-    text-align: center;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear;
-    display: none;
-}
-.back-to-top:hover{
-    color: #fff;
-    background-color: #021d3a;
-}
-
 /*=====================================================
     21. ABOUT PAGE css 
 ======================================================*/
@@ -572,6 +567,206 @@ img{
 }
 
 /*=====================================================
+    23. COURSE SINGEl PAGE css 
+======================================================*/
+
+
+.corses-singel-left{
+    padding: 45px 50px;
+    background-color: #fff;
+}
+
+.corses-singel-left .title{}
+.corses-singel-left .title h3{
+    font-size: 30px;
+    color: #000;
+    font-weight: 600;
+    padding-bottom: 25px;
+}
+
+.corses-singel-left .course-terms{}
+.corses-singel-left .course-terms > ul > li{
+    display: inline-block;
+    margin-right: 60px;
+}
+.corses-singel-left .course-terms > ul li:last-child{
+    margin-right: 0;
+}
+
+.corses-singel-left .course-terms ul li .teacher-name{
+    position: relative;
+}
+.corses-singel-left .course-terms ul li .teacher-name .thum{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+}
+.corses-singel-left .course-terms ul li .teacher-name .thum img{
+    border-radius: 50%;
+}
+.corses-singel-left .course-terms ul li .teacher-name .name{
+    padding-left: 60px;
+}
+
+.corses-singel-left .course-terms ul li .review span,
+.corses-singel-left .course-terms ul li .teacher-name .name span,
+.corses-singel-left .course-terms ul li .course-category span{
+    color: #8a8a8a;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.corses-singel-left .course-terms ul li .teacher-name .name h6,
+.corses-singel-left .course-terms ul li .course-category h6{
+    font-size: 16px;
+    color: #24486e;
+    font-weight: 700;
+}
+
+.corses-singel-left .course-terms ul li .review{}
+.corses-singel-left .course-terms ul li .review ul li {
+    display: inline-block;
+}
+.corses-singel-left .course-terms ul li .review ul li a {
+    font-size: 14px;
+    color: #ffc600;
+}
+.corses-singel-left .course-terms ul li .review ul li.rating{
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    margin-left: 13px;
+}
+
+.corses-singel-image{}
+.corses-singel-image img{
+    width: 100%;
+}
+
+.overview-description{
+    padding: 0px 30px 25px;
+}
+.overview-description .singel-description{}
+.overview-description .singel-description h6{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #000;
+    padding-bottom: 10px;
+}
+
+
+.course-features{
+    background-color: #fff;
+    padding: 30px 35px;
+    border-radius: 5px;
+}
+.course-features h4,
+.You-makelike h4{
+    font-size: 24px;
+    color: #07294d;
+    padding-bottom: 15px;
+}
+.course-features ul{}
+.course-features ul li{
+    font-size: 15px;
+    color: #8a8a8a;
+    overflow: hidden;
+    line-height: 45px;
+    border-bottom: 1px solid #d2d2d2;
+}
+.course-features ul li:last-child{
+    border-bottom: 0;
+}
+
+.course-features ul li i{
+    color: #ffc600;
+    margin-right: 8px;
+}
+.course-features ul li span{
+    float: right;
+}
+
+.course-features .price-button{
+    overflow: hidden;
+}
+.course-features .price-button span{
+    font-size: 18px;
+    color: #24486e;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 12px;
+}
+.course-features .price-button span b{
+    color: #ffc600;
+}
+.course-features .price-button .main-btn{
+    float: right;
+}
+
+.You-makelike{
+    background-color: #fff;
+    padding: 25px 30px 30px;
+    border-radius: 5px;
+}
+.You-makelike .singel-makelike{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.You-makelike .singel-makelike .image{
+    position: relative;
+}
+.You-makelike .singel-makelike .image::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(7, 41, 77, 0.8);
+}
+.You-makelike .singel-makelike .image img{
+    width: 100%;
+}
+
+.You-makelike .singel-makelike .cont{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 30px;
+}
+.You-makelike .singel-makelike .cont h4{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.You-makelike .singel-makelike .cont h4:hover{
+    color: #ffc600;
+}
+
+.You-makelike .singel-makelike .cont ul li {
+    display: inline-block;
+    margin-right: 15px;
+    color: #ffc600;
+}
+.You-makelike .singel-makelike .cont ul li a{
+    font-size: 14px;
+    color: #fff;
+}
+.You-makelike .singel-makelike .cont ul li a i{
+    margin-right: 3px;
+}
+
+/*=====================================================
     31. CONTACT PAGE css 
 ======================================================*/
 
@@ -671,4 +866,29 @@ p.form-message.error {
 
 .contact-address .contact-heading h5{
 	padding-bottom: 15px;
+}
+
+
+
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+.theme-switcher .btn {
+    background-color: #ffc600; /* Default button color */
+    color: #07294d; /* Text color */
+    border: 1px solid #07294d; /* Border color */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: 700; /* Bold text */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition */
+}
+
+.theme-switcher .btn:hover {
+    background-color: #07294d; /* Change background on hover */
+    color: #ffc600; /* Change text color on hover */
 }
